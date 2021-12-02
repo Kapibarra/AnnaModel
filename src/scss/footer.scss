@@ -13,6 +13,8 @@
 .copyright {
     font-family: 'AvenirLTStd-Book', Helvetica, sans-serif;
     color: $black;
+    width: 100%;
+    max-width: 290px;
     font-size: 12px;
     opacity: 0.7;
     display: flex;
@@ -42,11 +44,16 @@
 
 .footer__socialnetwork {
     width: 100%;
-    max-width: 250px;
+    max-width: 290px;
     font-family: 'AvenirLTStd-Book', Helvetica, sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.year {
+    font-family: 'AvenirLTStd-Book', Helvetica, sans-serif;
+    color: #3A3A3A;
 }
 
 .footer__social-logo {
