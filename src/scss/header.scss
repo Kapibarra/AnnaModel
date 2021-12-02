@@ -2,10 +2,7 @@
 .header {
     font-family: 'Raleway', sans-serif;
     font-weight: 200;
-    // font-family: 'Six Caps', sans-serif;
     color: $black;
-    font-size: 50px;
-    // width: 100%;
     max-width: 1400px;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -18,9 +15,9 @@
 }
 
 .header__logo {
-    letter-spacing: 12px;
     padding-bottom: 2px;
     cursor: pointer;
+    font-size: 48px;
 }
 
 .header__logo a {
@@ -30,7 +27,7 @@
 
 .header__nav {
     display: flex;
-    width: 370px;
+    width: 250px;
     justify-content: space-between;
     align-items: baseline;
     vertical-align: bottom;
@@ -54,7 +51,7 @@
 }
 
 .active {
-    border-bottom: 1px solid $black;
+    color: #C4C4C4;
 }
 
 .header__nav-item:hover {
