@@ -1,6 +1,6 @@
 import "./scss/index.scss";
 import { createApi } from 'unsplash-js';
-import {createBigCard, createCardWrapper, getHeight, getVal, resizeAll} from './utils';
+import {createBigCard, getHeight, getVal, resizeAll} from './utils';
 
 
 /* GALLERY AUTO GRID */
@@ -10,31 +10,26 @@ function loadImage(page) {
     accessKey: 'YiJBrVJIK2ScDQUqWmAfskLIYwFWBPfCIA7xww7SfSk',
   });
 
-  unsplash.users.getPhotos({ username: 'annfish', perPage: 20, page: page }).then((result) => {
+  unsplash.users.getPhotos({ username: 'elise_outside', perPage: 20, page: page }).then((result) => {
     if (result.errors) {
       // handle error here
       console.log('error occurred: ', result.errors[0]);
     } else {
-      const items = [];
-      const gallery = document.querySelector("#gallery");
+      // const items = [];
+      // const gallery = document.querySelector("#gallery");
       // handle success here
       const photo = result.response;
-  
-      const photosArr = photos
+  console.log(photo);
+      const photosArr = photo.results
 
-      photosArr.forEach((e, i) => {
-        const photo = photos;
-        const div = createCardWrapper();
-        const img = new Image();
-        img.src = e.thumb;
-        img.alt = 'image';
-        img.loading = 'lazy'
-
-        div.lastChild.append(img);
-        gallery.append(div);
-        items.push(div);
+      photosArr.forEach((e) => {
+        const photo = e.urls.small;
+        const div = document.createElement('div');
+        div.className = 'gallery-item';
+        div.innerHTML = `<div class="content"><img src=${photo}></div>`;
+        document.querySelector("#gallery").append(div)
       })
-
+      const gallery = document.querySelector("#gallery");
       gallery.querySelectorAll("img").forEach(function (item) {
         item.classList.add("activeimg");
         if (item.complete) {
@@ -60,7 +55,7 @@ function loadImage(page) {
 
 
       window.addEventListener("resize", () => {resizeAll(gallery)});
-      items.forEach(function (item) {
+      gallery.querySelectorAll(".gallery-item").forEach(function (item) {
         createBigCard(item, gallery);
       });
     }
@@ -124,11 +119,11 @@ function burgerButtonToggle() {
 window.addEventListener("scroll", burgerButtonToggle);
 
 /* AUTO ImageLoad 20per page*/ 
-window.onscroll = function (ev) {
-  if ((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight && page <= 10) {
-    loadImage(++page)
-  }
-};
+// window.onscroll = function (ev) {
+//   if ((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight && page <= 10) {
+//     loadImage(++page)
+//   }
+// };
 
 /* INPUT MASK */
 // const selector = document.querySelectorAll('input[type="tel"]')
