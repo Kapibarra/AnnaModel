@@ -1,7 +1,6 @@
 import "./scss/index.scss";
 import { createApi } from 'unsplash-js';
 import {createBigCard, createCardWrapper, getHeight, getVal, resizeAll} from './utils';
-import photos from './gallery'
 
 
 /* GALLERY AUTO GRID */
@@ -19,12 +18,12 @@ function loadImage(page) {
       const items = [];
       const gallery = document.querySelector("#gallery");
       // handle success here
-      // const photo = result.response;
+      const photo = result.response;
   
       const photosArr = photos
 
       photosArr.forEach((e, i) => {
-        // const photo = photos;
+        const photo = photos;
         const div = createCardWrapper();
         const img = new Image();
         img.src = e.thumb;
@@ -125,11 +124,11 @@ function burgerButtonToggle() {
 window.addEventListener("scroll", burgerButtonToggle);
 
 /* AUTO ImageLoad 20per page*/ 
-// window.onscroll = function (ev) {
-//   if ((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight && page <= 10) {
-//     loadImage(++page)
-//   }
-// };
+window.onscroll = function (ev) {
+  if ((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight && page <= 10) {
+    loadImage(++page)
+  }
+};
 
 /* INPUT MASK */
 // const selector = document.querySelectorAll('input[type="tel"]')
@@ -138,104 +137,3 @@ window.addEventListener("scroll", burgerButtonToggle);
 
 document.getElementById("year").innerHTML = new Date().getFullYear();
 
-if (document.getElementsByClassName('gallery')) {
-  const personalShootingBtn = document.querySelector(".personal-shooting")
-  const crotiaBtn = document.querySelector(".crotia")
-  const crotiaBtnMobile = document.querySelector(".crotia-mobile")
-  const personalShootingBtnMobile = document.querySelector('.personal-shooting-mobile')
-
-  console.log(crotiaBtnMobile, personalShootingBtnMobile);
-
-  personalShootingBtn.addEventListener('click', personalShootingToggle)
-  crotiaBtn.addEventListener('click', crotiaToggle)
-  personalShootingBtnMobile.addEventListener('click', personalShootingMobileToggle)
-  crotiaBtnMobile.addEventListener('click', crotiaMobileToggle)
-}
-
-function personalShootingToggle() {
-  const galleryBlock = document.querySelector('.gallery')
-  const personalShootingBlock = document.querySelector('.personal__shooting')
-  const crotiaBlock = document.querySelector(".crotia__block")
-  const loader = document.getElementById('preloader')
-
-  galleryBlock.classList.add('unvisible-block')
-  galleryBlock.classList.remove('visible-block')
-
-  crotiaBlock.classList.remove('visible-block')
-  crotiaBlock.classList.add('unvisible-block')
-
-  personalShootingBlock.classList.remove('unvisible-block')
-  personalShootingBlock.classList.add("visible-block")
-  loader.classList.remove('preloader_hidden')
-  setTimeout(() => {
-    loader.classList.add('preloader_hidden')
-  }, Math.floor(Math.random() * 2000))
-}
-
-function crotiaToggle() {
-  const galleryBlock = document.querySelector('.gallery')
-  const personalShootingBlock = document.querySelector('.personal__shooting')
-  const crotiaBlock = document.querySelector(".crotia__block")
-  const loader = document.getElementById('preloader')
-
-  galleryBlock.classList.remove('visible-block')
-  galleryBlock.classList.add('unvisible-block')
-
-  personalShootingBlock.classList.remove('visible-block')
-  personalShootingBlock.classList.add('unvisible-block')
-
-  crotiaBlock.classList.remove('unvisible-block')
-  crotiaBlock.classList.add('visible-block')
-  loader.classList.remove('preloader_hidden')
-  setTimeout(() => {
-    loader.classList.add('preloader_hidden')
-  }, Math.floor(Math.random() * 2000))
-}
-
-function personalShootingMobileToggle() {
-  const galleryBlock = document.querySelector('.gallery')
-  const personalShootingBlock = document.querySelector('.personal__shooting')
-  const crotiaBlock = document.querySelector(".crotia__block")
-  const navToggle = document.querySelector('.nav-toggle')
-  const nav = document.querySelector('.nav')
-
-  galleryBlock.classList.add('unvisible-block')
-  galleryBlock.classList.remove('visible-block')
-
-  crotiaBlock.classList.remove('visible-block')
-  crotiaBlock.classList.add('unvisible-block')
-
-  personalShootingBlock.classList.remove('unvisible-block')
-  personalShootingBlock.classList.add("visible-block")
-
-  setTimeout(() => {
-    navToggle.classList.remove('expanded')
-    nav.classList.remove('expanded')
-}, 100)
-
-  console.log('ps work');
-}
-
-function crotiaMobileToggle() {
-  const galleryBlock = document.querySelector('.gallery')
-  const personalShootingBlock = document.querySelector('.personal__shooting')
-  const crotiaBlock = document.querySelector(".crotia__block")
-  const navToggle = document.querySelector('.nav-toggle')
-  const nav = document.querySelector('.nav')
-
-  galleryBlock.classList.remove('visible-block')
-  galleryBlock.classList.add('unvisible-block')
-
-  personalShootingBlock.classList.remove('visible-block')
-  personalShootingBlock.classList.add('unvisible-block')
-
-  crotiaBlock.classList.remove('unvisible-block')
-  crotiaBlock.classList.add('visible-block')
-
-  setTimeout(() => {
-    navToggle.classList.remove('expanded')
-    nav.classList.remove('expanded')
-}, 100)
-
-  console.log('travel work work');
-}

@@ -57,30 +57,6 @@ module.exports = {
             },
         }),
         new HTMLWebpackPlugin({
-            filename: "film.html",
-            template: "film.html",
-            minify: {
-                removeComments: isProd,
-                collapseWhitespace: isProd,
-            },
-        }),
-        new HTMLWebpackPlugin({
-            filename: "price.html",
-            template: "price.html",
-            minify: {
-                removeComments: isProd,
-                collapseWhitespace: isProd,
-            },
-        }),
-        new HTMLWebpackPlugin({
-            filename: "about.html",
-            template: "about.html",
-            minify: {
-                removeComments: isProd,
-                collapseWhitespace: isProd,
-            },
-        }),
-        new HTMLWebpackPlugin({
             filename: "contacts.html",
             template: "contacts.html",
             minify: {
