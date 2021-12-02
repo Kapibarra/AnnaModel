@@ -27,17 +27,14 @@
 
 .header__nav {
     display: flex;
-    width: 250px;
+    width: 180px;
     justify-content: space-between;
     align-items: baseline;
     vertical-align: bottom;
 }
 
 .header__nav-item {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    font-family: 'Avenir', Helvetica, sans-serif;
     font-size: 18px;
     vertical-align: bottom;
     margin-right: 10px;
