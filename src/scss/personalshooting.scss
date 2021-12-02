@@ -1,0 +1,52 @@
+.personal__shooting-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+}
+
+.personal__shooting-name-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: 26px;
+    margin: 50px 0;
+}
+
+.personal__shooting-card-wrapper {
+    width: 100%;
+    max-width: 1380px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    & .personal-card {
+        margin: 0 auto;
+    }
+}
+
+.big-photo-personal {}
+
+@media (max-width:1024px) {
+    .big-photo-personal {
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        align-items: center
+    }
+}
+
+@media (max-width:768px) {
+    .big-photo-personal {
+        width: 100%;
+        max-width: 350px;
+    }
+    .personal-card img {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .personal__shooting-card-wrapper {
+        justify-content: space-around;
+    }
+}

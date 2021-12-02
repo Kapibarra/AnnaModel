@@ -1,0 +1,102 @@
+@import '_variables.scss';
+.header {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    // font-family: 'Six Caps', sans-serif;
+    color: $black;
+    font-size: 50px;
+    // width: 100%;
+    max-width: 1400px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.header__logo {
+    letter-spacing: 12px;
+    padding-bottom: 2px;
+    cursor: pointer;
+}
+
+.header__logo a {
+    text-decoration: none;
+    color: $black;
+}
+
+.header__nav {
+    display: flex;
+    width: 370px;
+    justify-content: space-between;
+    align-items: baseline;
+    vertical-align: bottom;
+}
+
+.header__nav-item {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 18px;
+    vertical-align: bottom;
+    margin-right: 10px;
+    margin-top: 20px;
+    line-height: 40px;
+    text-decoration: none;
+    color: $black;
+    transition: transform 250ms ease-in-out;
+    border-bottom: 1px solid rgba($color: $black, $alpha: 0);
+    vertical-align: bottom;
+}
+
+.active {
+    border-bottom: 1px solid $black;
+}
+
+.header__nav-item:hover {
+    border-bottom: 1px solid rgba($color: $black, $alpha: 1);
+    transform: scaleX(1);
+    transition: all 0.8s;
+}
+
+.header__nav-item a::after {
+    border-bottom: 1px solid black;
+}
+
+@media screen and (max-width: 1280px) {
+    .desktop-nav {
+        display: none;
+    }
+    .nav-toggle {
+        display: block !important;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .header__logo {
+        max-width: 350px;
+    }
+    .nav-toggle {
+        top: 72px !important;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .header {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .header__logo {
+        font-size: 25px !important;
+    }
+    .nav-toggle {
+        top: 30px !important;
+        right: 15px !important;
+    }
+}
