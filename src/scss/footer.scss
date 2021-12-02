@@ -42,8 +42,10 @@
 
 .footer__socialnetwork {
     width: 100%;
-    max-width: 100px;
+    max-width: 250px;
+    font-family: 'AvenirLTStd-Book', Helvetica, sans-serif;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
