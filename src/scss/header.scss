@@ -48,16 +48,16 @@
     transition: transform 250ms ease-in-out;
     border-bottom: 1px solid rgba($color: $black, $alpha: 0);
     vertical-align: bottom;
+    transition: all 0.3s;
 }
 
 .active {
-    color: #C4C4C4;
+    border-bottom: 1px solid black;
 }
 
 .header__nav-item:hover {
-    border-bottom: 1px solid rgba($color: $black, $alpha: 1);
-    transform: scaleX(1);
-    transition: all 0.8s;
+    color: #C4C4C4;
+    transition: all 0.3s;
 }
 
 .header__nav-item a::after {
