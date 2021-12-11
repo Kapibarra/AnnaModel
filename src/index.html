@@ -22,7 +22,8 @@
     <link rel="shortcut icon" href="src/favicon2.ico" type="image/x-icon">
     <link rel="stylesheet" href="../src/css/animate.min.css">
     <!-- Yandex.Metrika counter -->
-
+    <link href="gallery.css" rel="stylesheet">
+    <script src="gallery.js"></script>
     <title>MODEL ANNA KOSS</title>
 </head>
 
@@ -82,7 +83,17 @@
         </div>
 
         <main class="main">
-            <div class="gallery" id="gallery"></div>
+            <div class="gallery">
+                <?php
+    // (B) GET LIST OF IMAGE FILES FROM GALLERY FOLDER
+    $dir = __DIR__ . DIRECTORY_SEPARATOR . "gallery" . DIRECTORY_SEPARATOR;
+    $images = glob("$dir*.{jpg,jpeg,gif,png,bmp,webp}", GLOB_BRACE);
+
+    // (C) OUTPUT IMAGES
+    foreach ($images as $i) {
+      printf("<img src='gallery/%s'/>", basename($i));
+    }
+    ?></div>
         </main>
         <div class="bottom-line"></div>
         <!-- MAIN ENDS -->
