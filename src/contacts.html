@@ -13,89 +13,124 @@
 <body>
     <div id="preloader">
         <div id="loader"></div>
-        <span class="preloader__text">ANNA <br/>FILIPPOVA</span>
+        <span class="preloader__text">ANNA KOSS</span>
     </div>
     <div class="page">
-        <div class="header">
+        <a class="skip-link" href="#" style="display: none;">Skip</a>
+        <header class="header">
             <div class="header__logo">
-                <a href="index.html">ANNA FILIPPOVA</a>
+                <a href="index.html">ANNA KOSS</a>
             </div>
             <div class="header__nav desktop-nav">
-                <a class="header__nav-item" href="index.php" aria-label="collection">Portfolio</a>
-                <a class="header__nav-item " href="contacts.html" aria-label="contacts">Contacts</a>
+                <a class="header__nav-item " href="index.html" aria-label="Portfolio">Portfolio</a>
+                <a class="header__nav-item" href="contacts.html" aria-label="contacts">Contacts</a>
             </div>
             <div class="nav-toggle">
                 <div class="nav-toggle-bar"></div>
             </div>
             <nav class="nav">
                 <ul>
-                    <li><a class="header__nav-item" href="index.php" aria-label="collection">Portfolio</a></li>
-                    <li><a class="header__nav-item " href="contacts.html" aria-label="contacts">Contacts</a></li>
+                    <li><a class="header__nav-item " href="index.html" aria-label="Portfolio">Portfolio</a></li>
+                    <li><a class="header__nav-item" href="contacts.html" aria-label="contacts">Contacts</a></li>
+                </ul>
+                <div class="sidebar-burger">
+                    <div class="sidebar__contacts-mobile">
+                        <p>
+                            MENU
+                            </br>
+                            </br>
+                            <a href="tel:+79652915214">+7 (977) 999 - 39 - 17</a>
+                            </br>
+                            </br>
+                            <a href="mailto:anna.fishhh@gmail.com">anna.koss.mail@gmail.com</a>
+
+                        </p>
+                        <div class="sidebar__contact-socialmedia">
+                            <a href="https://www.instagram.com/annfish/" target="_blank" aria-label="instagram" rel="noopener"><img src="../src/img/instagramicon.png" /></a>
+                            <a href="https://wa.me/+79652915214" target="_blank" aria-label="whatapp" rel="noopener"><img src="../src/img/waicon.png" /></a>
+                        </div>
+                    </div>
+                </div>
+
+                <ul>
+                    <li><a class="header__nav-item " href="index.html" aria-label="Portfolio">Portfolio</a></li>
+                    <li><a class="header__nav-item" href="contacts.html" aria-label="contacts">Contacts</a></li>
                 </ul>
             </nav>
-        </div>
+        </header>
         <!--HEADER ENDS-->
-        <div class="main">
-            <div class="container">
-                <div class="left">
-                    <div class="contacts__header">
-                        <h1 class="animation a1">Get in <br>TOUCH</h1>
-                        <h4 class="animation a2">Inspired by your beauty...</h4>
-                    </div>
-                    <form action="https://formspree.io/f/mzbknddd" method="POST">
-                        <div class="form">
-                            <input type="text" class="form-field animation a3" placeholder="Name" name="name">
-                            <input type="email" class="form-field animation a4" placeholder="E-mail Adress" name="_replyto">
-                            <input type="text" class="form-field animation a5" placeholder="Message" name="message">
-                            <button type="submit" class="contact-btn animation a6" id="sendNew">SEND</button>
-                            <div class="terms">
-                                <input type="checkbox" checked onchange="document.getElementById('sendNew').disabled = !this.checked;" />
-                                <a class="private-policy" href="src\policy\Политика конфиденциальности.docx">Я согласен (-на) на обработку моих персональных данных</a>
-                            </div>
-                        </div>
-                    </form>
-                    <h1 class="contacts__social-title animation a4">Call me!</h1>
-                    <h1 class="contacts__social-subtitle animation a4">Or message me.</h1>
-                    <div class="contacts__social-logo-wrapper">
-                        <div class="contacts__social-logo-item animation a3">
-                            <a href="https://www.instagram.com/annfish/"> <img class="contacts__social-logo-item" src="../src/img/sidebarinsta.png" /></a>
-                        </div>
-                        <div class="contacts__social-logo-item animation a4">
-                            <a href="tel:+79652915214"> <img class="contacts__social-logo-item" src="../src/img/phoneicon.png" /></a>
-                        </div>
-                        <div class="contacts__social-logo-item animation a5">
-                            <a href="https://wa.me/+79652915214"> <img class="contacts__social-logo-item" src="../src/img/sidebarwa.png" /></a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="right">
-                    <img class="animation a3" src="../src/img/777.jpeg">
-                </div>
-            </div>
-
+        <div class="line-wrapper">
+            <div class="pre-line"></div>
+            <div class="lined-subtitle">MODEL</div>
+            <div class="post-line"></div>
         </div>
-        <div class="footer">
-            <div class="footer__logo">PHOTOGRAPHER <br>ANNA FILIPPOVA</div>
+
+        <div class="contacts">
+            <div class="left">
+                <img class="animation a3" src="../src/img/777.jpeg">
+            </div>
+            <div class="right">
+                <div class="contacts__header">
+                    <h1 class="animation a1">Get in <br>TOUCH</h1>
+                    <h4 class="animation a2">Inspired by your beauty...</h4>
+                </div>
+                <form action="https://formspree.io/f/mzbknddd" method="POST">
+                    <div class="form">
+                        <input type="text" class="form-field animation a3" placeholder="Name" name="name">
+                        <input type="email" class="form-field animation a4" placeholder="E-mail Adress" name="_replyto">
+                        <input type="text" class="form-field animation a5" placeholder="Message" name="message">
+                        <button type="submit" class="contact-btn animation a6" id="sendNew">SEND</button>
+                        <div class="terms">
+                            <input type="checkbox" checked onchange="document.getElementById('sendNew').disabled = !this.checked;" />
+                            <a class="private-policy" href="src\policy\Политика конфиденциальности.docx">Я согласен (-на) на обработку моих персональных данных</a>
+                        </div>
+                    </div>
+                </form>
+                <h1 class="contacts__social-title animation a4">Call me!</h1>
+                <h1 class="contacts__social-subtitle animation a4">Or message me.</h1>
+                <div class="contacts__social-logo-wrapper">
+                    <div class="contacts__social-logo-item animation a3">
+                        <a href="https://www.instagram.com/annfish/"> <img class="contacts__social-logo-item" src="../src/img/sidebarinsta.png" /></a>
+                    </div>
+                    <div class="contacts__social-logo-item animation a4">
+                        <a href="tel:+79652915214"> <img class="contacts__social-logo-item" src="../src/img/phoneicon.png" /></a>
+                    </div>
+                    <div class="contacts__social-logo-item animation a5">
+                        <a href="https://wa.me/+79652915214"> <img class="contacts__social-logo-item" src="../src/img/sidebarwa.png" /></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="bottom-line"></div>
+        <!-- MAIN ENDS -->
+        <footer class="footer">
+            <div class="copyright"><a href="https://madstack.ru" target="_blank" rel="noopener">&#169 Made with love by MadStack</a></div>
+            <div class="year"><span id="year" class="year"></span></div>
             <div class="footer__socialnetwork">
-                <a href="https://www.instagram.com/annfish/" target="_blank" aria-label="instagram" rel="noopener"><img class="footer__social-logo" src="src/img/sidebarinsta.png" alt="">
+                <a href="tel:+79779993917" class="phone">+7 (977) 999 - 39 - 17</a>
+                <a href="https://www.instagram.com/annfish/" target="_blank" aria-label="instagram" rel="noopener"><img class="footer__social-logo" src="src/img/instagramicon.png" alt="">
                     </img>
                 </a>
-                <a href="https://wa.me/+79652915214" target="_blank" aria-label="whatapp" rel="noopener"><img class="footer__social-logo" src="src/img/sidebarwa.png" alt=""></img>
+                <a href="https://wa.me/+79652915214" target="_blank" aria-label="whatapp" rel="noopener"><img class="footer__social-logo" src="src/img/waicon.png" alt=""></img>
                 </a>
             </div>
-            <div class="copyright"><a href="https://madstack.ru" target="_blank" rel="noopener">&#169 MadStack 2020 - <span id="year"></span></a></div>
-        </div>
+
+        </footer>
         <a class="top-link hide" href="" id="js-top">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6">
+                <path d="M12 6H0l6-6z" />
+            </svg>
             <span class="screen-reader-text">Back to top</span>
         </a>
+        <!--FOOTER ENDS-->
+
     </div>
     <script>
         window.onload = function() {
             setTimeout(() => {
                 document.getElementById('preloader').classList.add('preloader_hidden')
-            }, 300)
+            }, Math.floor(Math.random() * 2000))
         };
     </script>
 </body>
