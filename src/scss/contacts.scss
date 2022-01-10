@@ -1,6 +1,8 @@
     .contacts {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
+        flex-wrap: wrap;
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
@@ -9,11 +11,8 @@
     }
     
     .left {
+        width: 100%;
         max-width: 600px;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
         animation-name: left;
         animation-duration: 1s;
         animation-fill-mode: both;
@@ -23,17 +22,6 @@
     .right {
         max-width: 600px;
         padding-top: 30px;
-    }
-    
-    .right img {
-        max-width: 600px;
-        flex: 1;
-        transition: 1s;
-        filter: grayscale(10);
-        &:hover {
-            transition: all 2s;
-            filter: none;
-        }
     }
     
     .contacts__header>h1 {
@@ -255,18 +243,22 @@
             margin: 0 auto;
             width: 100%;
         }
-        .right {
-            display: none;
-        }
-        .right img {
-            display: none;
-        }
-        .left {
-            margin: 0 auto;
-        }
+        // .left {
+        //     width: 100%;
+        //     max-width: 600px;
+        // }
+        // .left {
+        //     display: none;
+        // }
+        // .left img {
+        //     display: none;
+        // }
+        // .left {
+        //     margin: 0 auto;
+        // }
     }
     
-    @media screen and (max-width: 414px) {
+    @media screen and (max-width: 428px) {
         .contacts__social-logo-item {
             margin: 0 auto;
             margin-top: 15px;
@@ -279,5 +271,31 @@
         .contacts__social-subtitle {
             margin: 0 auto;
             margin-top: 5px;
+        }
+        .contacts {
+            display: block;
+            box-sizing: border-box;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .left {
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+        .left img {
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+        .right {
+            width: 100%;
+            margin: 0 auto;
+        }
+        .private-policy {
+            text-align: right;
+        }
+        .terms {
+            justify-content: flex-end;
         }
     }
