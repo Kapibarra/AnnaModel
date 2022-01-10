@@ -67,18 +67,18 @@
 
         <div class="contacts">
             <div class="left">
-                <img class="animation a3" src="../src/img/contacts_img.png">
+                <img class="animation a3 left" src="../src/img/contacts_img.png">
             </div>
             <div class="right">
                 <div class="contacts__header">
                     <h1 class="animation a1">Keep in <br>TOUCH</h1>
                 </div>
-                <form action="https://formspree.io/f/mzbknddd" method="POST">
+                <form action="mail.php" method="POST">
                     <div class="form">
                         <input type="text" class="form-field animation a3" placeholder="Name" name="name">
                         <input type="email" class="form-field animation a4" placeholder="E-mail Adress" name="_replyto">
                         <input type="text" class="form-field animation a5" placeholder="Message" name="message">
-                        <button type="submit" class="contact-btn animation a6" id="sendNew">SEND</button>
+                        <button type="submit" class="contact-btn animation a6" id="sendNew">Send</button>
                         <div class="terms">
                             <input type="checkbox" checked onchange="document.getElementById('sendNew').disabled = !this.checked;" />
                             <a class="private-policy" href="src\policy\Политика конфиденциальности.docx">Я согласен (-на) на обработку моих персональных данных</a>
@@ -96,7 +96,6 @@
                         <a href="https://wa.me/+79652915214"> <img class="contacts__social-logo-item" src="../src/img/sidebarwa.png" /></a>
                     </div>
                 </div>
-
             </div>
         </div>
         <div class="bottom-line"></div>
